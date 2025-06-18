@@ -1,7 +1,7 @@
-const axios = require("axios");
-const cheerio = require("cheerio");
+import axios from "axios";
+import cheerio from "cheerio";
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   const vin = req.query.vin;
   const part = req.query.part;
   if (!vin || !part) {
@@ -23,4 +23,4 @@ module.exports = async (req, res) => {
   } catch (e) {
     return res.status(500).json({ error: e.message });
   }
-};
+}
