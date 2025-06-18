@@ -1,6 +1,7 @@
 {
   "name": "askalex-api",
   "version": "1.0.0",
+  "type": "module",
   "main": "api/lookup.js",
   "scripts": {
     "start": "vercel dev"
